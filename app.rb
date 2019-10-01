@@ -13,12 +13,9 @@ class App < Sinatra::Base
     "Hello #{@user_name}!"
   end
 
- get "/:operation/:number1/:number2" do
-    @number1 = params[:number1]
-    @number2 = params[:number2]
-    @operation = params[:operation]
-
-    @number1.send(@operation,@number2)
+  get '/multiply/:number1/:number2' do
+    @product = params[:number1]*params[:number2]
+    "#{@product}"
   end
 
   get "/goodbye/:name" do
