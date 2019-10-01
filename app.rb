@@ -14,7 +14,7 @@ class App < Sinatra::Base
   end
 
   get '/multiply/:number1/:number2' do
-    ""
+    @product
   end
 
   get "/goodbye/:name" do
